@@ -15,6 +15,17 @@ module.exports = {
     extend: {
       colors: {
         brand: "#FD4F00",
+      },
+      animation: {
+        jiggle: 'jiggle 1s ease-in-out'
+      }, 
+      keyframes: { 
+        jiggle: {
+          '0%, 100%': { transform: 'translateX(0) rotate(0deg)'},
+          '25%': { transform: 'translateX(-2px) rotate(-5deg)'},
+          '50%': { transform: 'translateX(2px) rotate(5deg)'},
+          '75%': { transform: 'translateX(-2x) rotate(-5deg)'},
+        }
       }
     },
   },
