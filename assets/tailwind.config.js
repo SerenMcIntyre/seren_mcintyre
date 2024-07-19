@@ -26,6 +26,12 @@ module.exports = {
           '50%': { transform: 'translateX(2px) rotate(5deg)'},
           '75%': { transform: 'translateX(-2x) rotate(-5deg)'},
         }
+      },
+      backgroundImage: {
+        'dot-grid': `radial-gradient(circle, rgba(0, 0, 0, 20%) 1px, transparent 1px)`,
+      },
+      backgroundSize: {
+        'dot-grid': '20px 20px',
       }
     },
   },
