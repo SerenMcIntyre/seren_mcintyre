@@ -13,10 +13,10 @@ defmodule RenMcintyreWeb.Sidenav do
       justify-between">
       <h1 class="text-2xl font-bold">Ren McIntyre</h1>
 
-      <section id="main-links" class="w-3/4 gap-4 flex flex-col justify-center">
-        <a href="/">Item 1</a>
-        <a href="/blog">Item 2</a>
-        <a href="/about">Item 3</a>
+      <section id="main-links" class="w-3/4 gap-4 flex flex-col justify-center pb-16">
+        <a href="/">Me</a>
+        <a href="/blog">Blogs</a>
+        <a href="/projects">About Me</a>
       </section>
 
       <section id="socials" class="w-3/4 gap-4 flex justify-center">
