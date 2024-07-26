@@ -42,3 +42,11 @@ liveSocket.connect()
 // >> liveSocket.disableLatencySim()
 window.liveSocket = liveSocket
 
+document.addEventListener("DOMContentLoaded", function () {
+  const toggleNavButton = document.getElementById("toggle-nav");
+  const navMenu = document.getElementById("navbar-mobile");
+
+  toggleNavButton.addEventListener("click", function () {
+    navMenu.classList.toggle("expanded");
+  });
+})

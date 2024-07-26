@@ -15,6 +15,25 @@ module.exports = {
     extend: {
       colors: {
         brand: "#FD4F00",
+        paper: "##FDF7F1",
+        accent: "#F2EDE5",
+      },
+      animation: {
+        jiggle: 'jiggle 1s ease-in-out'
+      }, 
+      keyframes: { 
+        jiggle: {
+          '0%, 100%': { transform: 'translateX(0) rotate(0deg)'},
+          '25%': { transform: 'translateX(-2px) rotate(-5deg)'},
+          '50%': { transform: 'translateX(2px) rotate(5deg)'},
+          '75%': { transform: 'translateX(-2x) rotate(-5deg)'},
+        }
+      },
+      backgroundImage: {
+        'dot-grid': `radial-gradient(circle, rgba(0, 0, 0, 20%) 1px, transparent 1px)`,
+      },
+      backgroundSize: {
+        'dot-grid': '20px 20px',
       }
     },
   },

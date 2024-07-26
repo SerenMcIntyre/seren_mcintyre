@@ -85,6 +85,7 @@ defmodule RenMcintyreWeb do
       import Phoenix.HTML
       # Core UI components and translation
       import RenMcintyreWeb.CoreComponents
+      import RenMcintyreWeb.Sidenav
       import RenMcintyreWeb.Gettext
 
       # Shortcut for generating JS commands
