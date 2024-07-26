@@ -15,6 +15,8 @@ module.exports = {
     extend: {
       colors: {
         brand: "#FD4F00",
+        paper: "##FDF7F1",
+        accent: "#F2EDE5",
       },
       animation: {
         jiggle: 'jiggle 1s ease-in-out'
