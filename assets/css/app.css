@@ -17,3 +17,19 @@ h1 {
   font-variation-settings:"SPAC" 100;
 }
 
+.content {
+  height: 0rem;
+  overflow: hidden;
+}
+
+.content section {
+  opacity: 0;
+}
+
+.expanded section {
+  opacity: 100;
+}
+
+.expanded .content {
+  height: 12rem;
+}
