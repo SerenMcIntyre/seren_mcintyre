@@ -5,6 +5,10 @@ defmodule RenMcintyreWeb.PageController do
     render(conn, :home)
   end
 
+  def tools(conn, _params) do
+    render(conn, :tools)
+  end
+
   def blog(conn, _params) do
     render(conn, :blog)
   end

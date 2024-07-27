@@ -19,6 +19,7 @@ defmodule RenMcintyreWeb.Router do
 
     get "/", PageController, :home
     get "/blog", PageController, :blog
+    get "/tools", PageController, :tools
   end
 
   # Other scopes may use custom stacks.

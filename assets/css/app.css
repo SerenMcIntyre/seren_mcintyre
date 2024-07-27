@@ -13,6 +13,10 @@ body {
   font-variation-settings: "BNCE" 30, "INFM" 100, "SPAC" 20;
 }
 
+p {
+  font-variation-settings: "INFM" 70
+}
+
 h1 {
   font-variation-settings:"SPAC" 100;
 }
