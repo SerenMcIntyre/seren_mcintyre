@@ -45,9 +45,9 @@ defmodule RenMcintyreWeb.Sidenav do
       id="main-links"
       class="gap-4 w-full flex flex-col justify-center duration-300 transition-all"
     >
-      <a href="/">Me</a>
+      <a href="/">Home</a>
+      <a href="/tools">Tools</a>
       <a href="/blog">Blogs</a>
-      <a href="/projects">About Me</a>
     </section>
     """
   end
