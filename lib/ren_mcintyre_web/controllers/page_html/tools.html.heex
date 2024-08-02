@@ -1,6 +1,10 @@
-<div class="flex flex-col gap-4 justify-center items-center w-full py-48">
-  <h1 class="font-semibold text-2xl">
-    Under construction!
-  </h1>
-  <Lucideicons.hammer />
-</div>
+<%= for skill_level <- @skill_levels do %>
+  <h1 class="text-2xl font-semibold"><%= skill_level.name %></h1>
+  <h3 class="text-lg"><%= skill_level.description %></h3>
+
+  <div class="flex gap-4 flex-wrap">
+    <%= for skill <- skill_level.skills do %>
+      <img src={skill.icon_src} />
+    <% end %>
+  </div>
+<% end %>

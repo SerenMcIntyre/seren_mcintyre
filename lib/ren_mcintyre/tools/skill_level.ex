@@ -1,11 +1,12 @@
-defmodule RenMcintyre.SkillLevel do
+defmodule RenMcintyre.Tools.SkillLevel do
   use Ecto.Schema
   import Ecto.Changeset
 
   schema "skill_level" do
     field :description, :string
+    field :name, :string
 
-    has_many :skills, RenMcintyre.SkillLevel
+    has_many :skills, RenMcintyre.Tools.Skill
 
     timestamps(type: :utc_datetime)
   end

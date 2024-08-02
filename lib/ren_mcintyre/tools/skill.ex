@@ -1,4 +1,4 @@
-defmodule RenMcintyre.Skill do
+defmodule RenMcintyre.Tools.Skill do
   use Ecto.Schema
   import Ecto.Changeset
 
@@ -7,7 +7,7 @@ defmodule RenMcintyre.Skill do
     field :description, :string
     field :icon_src, :string
 
-    belongs_to :skill_level, RenMcintyre.SkillLevel
+    belongs_to :skill_level, RenMcintyre.Tools.SkillLevel
 
     timestamps(type: :utc_datetime)
   end
