@@ -49,4 +49,45 @@ document.addEventListener("DOMContentLoaded", function () {
   toggleNavButton.addEventListener("click", function () {
     navMenu.classList.toggle("expanded");
   });
+
+  const skillSections = document.querySelectorAll('.skill-section');
+  for (let skillSection of skillSections) {
+    const card = skillSection.querySelector(`.card`);
+    const colour = skillSection.querySelector(`#${skillSection.id}-colour`);
+    const showColour = () => {
+      resetSkillSections(skillSections, skillSection);
+      colour.classList.toggle('hidden');
+      colour.classList.toggle('show-drawing');
+
+      card.classList.toggle('h-0');
+      card.classList.toggle('h-64');
+      card.classList.toggle('invisible');
+    }
+    skillSection.addEventListener("click", showColour);
+  }
 })
+
+
+const resetSkillSections = (sections, target) => {
+  for (let section of sections) {
+    if (section.id === target.id) {
+      continue;
+    }
+
+    const colour = section.querySelector(`#${section.id}-colour`);
+    const card = section.querySelector(`.card`);
+
+    // Reset colour element
+    if (colour.classList.contains('show-drawing')) {
+      colour.classList.remove('show-drawing');
+      colour.classList.add('hidden');
+    }
+
+    // Reset card element
+    if (!card.classList.contains('h-0')) {
+      card.classList.add('h-0');
+      card.classList.remove('h-64');
+      card.classList.add('invisible');
+    }
+  }
+}

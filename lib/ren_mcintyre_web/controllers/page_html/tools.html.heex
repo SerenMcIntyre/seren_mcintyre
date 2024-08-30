@@ -1,50 +1,66 @@
-<%= for skill_level <- @skill_levels do %>
-  <h1 class="text-2xl font-semibold"><%= skill_level.name %></h1>
-  <h3 class="text-lg"><%= skill_level.description %></h3>
+<h1 class="text-2xl font-semibold">Tools</h1>
+<p class="py-4 text-lg">
+  Below you'll find some of the skills I enjoy using - this list is definitely not complete and it'll keep growing!
+  Expanding it in a timely manner may be limited by finding time for the doodles...
+  <span class="text-xs pt-2 font-semibold hidden">PS: Hover/Tap to view more detail.</span>
+</p>
 
-  <div class="flex justify-around flex-wrap p-4">
-    <%= for skill <- skill_level.skills do %>
-      <section id="#{skill_level.name}-content" class="relative group flex flex-col">
-        <div>
-          <h2 class="text-xl font-semibold w-48 text-center"><%= skill.name %></h2>
-          <svg
-            width="100%"
-            height="100%"
-            viewBox="0 0 3334 2500"
-            version="1.1"
-            xmlns="http://www.w3.org/2000/svg"
-            xmlns:xlink="http://www.w3.org/1999/xlink"
-            xml:space="preserve"
-            xmlns:serif="http://www.serif.com/"
-            style="
+<section id="skills" class="mb-64">
+  <%= for skill_level <- @skill_levels do %>
+    <section id="#{skill_level.name}" <h1 class="text-xl font-semibold">
+      <%= skill_level.name %>
+      <h3 class="text-base font-light"><%= skill_level.description %></h3>
+
+      <div class="flex justify-around flex-wrap p-4">
+        <%= for skill <- skill_level.skills do %>
+          <section id={skill.name} class="skill-section relative group flex flex-col">
+            <div>
+              <h2 class="text-lg font-semibold w-48 text-center"><%= skill.name %></h2>
+              <svg
+                width="100%"
+                height="100%"
+                viewBox="0 0 3334 2500"
+                version="1.1"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                xml:space="preserve"
+                xmlns:serif="http://www.serif.com/"
+                style="
                   fill-rule: evenodd;
                   clip-rule: evenodd;
                   stroke-linecap: round;
                   stroke-linejoin: bevel;
                   stroke-miterlimit: 1.5;
                 "
-            class="animate-draw group w-48 h-48"
-          >
-            <!--<g id="colour" class="hidden group-hover:block">-->
-            <g class="colour" class="hidden group-hover:block">
-              <%= raw(skill.icon_colour) %>
-            </g>
-            <g class="linework">
-              <%= raw(skill.icon_linework) %>
-            </g>
-          </svg>
-        </div>
-        <!-- hidden group-hover:block -->
-        <div class="absolute bg-accent mt-52 w-64 h-64 flex flex-col gap-4 p-4 rounded-2xl 
+                class="animate-draw group w-48 h-48"
+              >
+                <!--<g id="colour" class="hidden group-hover:block">-->
+                <g class="colour hidden" id={"#{skill.name}-colour"}>
+                  <%= raw(skill.icon_colour) %>
+                </g>
+                <g class="linework">
+                  <%= raw(skill.icon_linework) %>
+                </g>
+                <g class="defs">
+                  <%= raw(skill.icon_defs) %>
+                </g>
+              </svg>
+            </div>
+            <!-- hidden group-hover:block -->
+            <div class="absolute bg-accent mt-52 -ml-4 w-64 flex flex-col gap-4 p-4 rounded-2xl 
                     overflow-auto z-10 card doodle-border
-                    scale-0 group-hover:scale-100 transition-all
-                    opacity-0 ">
-          <h2 class="text-xl font-semibold"><%= skill.name %></h2>
-          <p>
-            <%= skill.description %>
-          </p>
-        </div>
-      </section>
-    <% end %>
-  </div>
-<% end %>
+                    h-0 group-hover:h-64
+                    transition-[height]
+                    invisible group-hover:visible
+                    ">
+              <h2 class="text-xl font-semibold"><%= skill.name %></h2>
+              <p class="text-sm">
+                <%= skill.description %>
+              </p>
+            </div>
+          </section>
+        <% end %>
+      </div>
+    </section>
+  <% end %>
+</section>
