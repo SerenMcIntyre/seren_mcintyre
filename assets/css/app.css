@@ -37,3 +37,16 @@ h1 {
 .expanded .content {
   height: 12rem;
 }
+
+@keyframes draw {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+.animate-draw:hover .colour path {
+  stroke-dasharray: 100000;
+  stroke-dashoffset: 100000;
+  animation: draw 7s ease forwards;
+}
+

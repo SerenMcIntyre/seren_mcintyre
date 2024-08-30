@@ -9,6 +9,8 @@ defmodule RenMcintyreWeb.PageController do
   def tools(conn, _params) do
     skill_levels = Tools.all_skills()
 
+    IO.inspect(skill_levels)
+
     render(conn, :tools, skill_levels: skill_levels)
   end
 

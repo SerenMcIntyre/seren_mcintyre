@@ -5,7 +5,9 @@ defmodule RenMcintyre.Tools.Skill do
   schema "skills" do
     field :name, :string
     field :description, :string
-    field :icon_src, :string
+    field :icon_linework, :string
+    field :icon_colour, :string
+    field :icon_defs, :string
 
     belongs_to :skill_level, RenMcintyre.Tools.SkillLevel
 
@@ -15,7 +17,7 @@ defmodule RenMcintyre.Tools.Skill do
   @doc false
   def changeset(skill, attrs) do
     skill
-    |> cast(attrs, [:name, :icon_src, :description])
-    |> validate_required([:name, :icon_src, :description])
+    |> cast(attrs, [:name, :icon_linework, :icon_colour, :icon_defs, :description])
+    |> validate_required([:name, :icon_linework, :icon_colour, :icon_defs, :description])
   end
 end
