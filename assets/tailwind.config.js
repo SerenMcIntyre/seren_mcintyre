@@ -19,7 +19,8 @@ module.exports = {
         accent: "#F2EDE5",
       },
       animation: {
-        jiggle: 'jiggle 1s ease-in-out'
+        jiggle: 'jiggle 1s ease-in-out',
+        drawSvg: 'draw 7s ease forwards'
       }, 
       keyframes: { 
         jiggle: {
@@ -27,6 +28,11 @@ module.exports = {
           '25%': { transform: 'translateX(-2px) rotate(-5deg)'},
           '50%': { transform: 'translateX(2px) rotate(5deg)'},
           '75%': { transform: 'translateX(-2x) rotate(-5deg)'},
+        },
+        drawSvg: {
+          to: {
+            'stroke-dashoffset': '0'
+          }
         }
       },
       backgroundImage: {
