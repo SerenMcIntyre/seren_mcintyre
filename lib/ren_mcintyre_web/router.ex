@@ -19,6 +19,7 @@ defmodule RenMcintyreWeb.Router do
 
     get "/", PageController, :home
     get "/blog", PageController, :blog
+    get "/blog/:id", PageController, :blog_post
     get "/tools", PageController, :tools
   end
 

@@ -13,6 +13,10 @@ defmodule RenMcintyreWeb.PageController do
   end
 
   def blog(conn, _params) do
-    render(conn, :blog)
+    render(conn, :blog, posts: RenMcIntyre.Blog.all_posts())
+  end
+
+  def blog_post(conn, %{"id" => id}) do
+    render(conn, :blog_post, post: RenMcIntyre.Blog.get_post(id))
   end
 end

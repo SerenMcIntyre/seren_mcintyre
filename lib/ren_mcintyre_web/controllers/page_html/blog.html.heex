@@ -1,6 +1,19 @@
-<div class="flex flex-col gap-4 justify-center items-center w-full py-48">
-  <h1 class="font-semibold text-2xl">
-    Under construction!
-  </h1>
-  <Lucideicons.hammer />
-</div>
+<h1 class="font-semibold text-2xl">
+  Blog Posts
+</h1>
+
+<nav class="w-full py-8">
+  <ol>
+    <%= for post <- @posts do %>
+      <li class="list-item doodle-border group hover:opacity-80 hover:-translate-y-1 hover:cursor-pointer transition-all bg-accent">
+        <.link href={~p"/blog/#{post.id}"} class="inline-block transition-all">
+          <h2 class="block text-lg group-hover:text-pink-500">
+            <%= post.title %>
+          </h2>
+          <p class="font-thin"><%= post.description %></p>
+          <p class="font-thin text-xs opacity-80 w-full text-right"><%= post.date %> </p>
+        </.link>
+      </li>
+    <% end %>
+  </ol>
+</nav>
