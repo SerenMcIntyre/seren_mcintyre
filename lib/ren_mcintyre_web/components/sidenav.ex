@@ -9,9 +9,9 @@ defmodule RenMcintyreWeb.Sidenav do
   """
   def sidenav(assigns) do
     ~H"""
-    <nav class="p-8 w-80 hidden sm:flex flex-col items-center bg-accent
+    <nav class="nav p-8 w-80 hidden sm:flex flex-col items-center bg-accent
       justify-between">
-      <h1 class="text-2xl font-bold">Ren McIntyre</h1>
+      <h1 class="text-2xl font-bold">Seren McIntyre</h1>
 
       <.links />
       <.socials />
@@ -21,10 +21,10 @@ defmodule RenMcintyreWeb.Sidenav do
 
   def sidenav_mobile(assigns) do
     ~H"""
-    <nav id="navbar-mobile" class="sticky top-0 bg-accent sm:hidden h-18 text-xl">
+    <nav id="navbar-mobile" class="nav sticky top-0 bg-accent sm:hidden h-18 text-xl">
       <section id="navbar-mobile-header" class="flex justify-between p-4 items-center">
         <span class="spacer"></span>
-        <h1 class="text-xl font-bold">Ren McIntyre</h1>
+        <h1 class="text-xl font-bold">Seren McIntyre</h1>
         <button id="toggle-nav" aria-label="Expand Navbar"><Lucideicons.menu /></button>
       </section>
 

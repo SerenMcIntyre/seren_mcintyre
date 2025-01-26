@@ -36,7 +36,7 @@ module.exports = {
         }
       },
       backgroundImage: {
-        'dot-grid': `radial-gradient(circle, rgba(0, 0, 0, 20%) 1px, transparent 1px)`,
+        'dot-grid': `radial-gradient(circle, rgba(0, 0, 0, 10%) 1px, transparent 1px)`,
       },
       backgroundSize: {
         'dot-grid': '20px 20px',

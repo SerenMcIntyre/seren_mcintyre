@@ -2,23 +2,60 @@
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 @import "doodle.css";
+@import "makeup.css";
 @import url('https://fonts.googleapis.com/css2?family=Short+Stack&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Shantell+Sans:ital,wght,BNCE,INFM,SPAC@0,300..800,-100..100,0..100,0..100;1,300..800,-100..100,0..100,0..100&display=swap');
 
 body {
   font-family: "Shantell Sans", cursive;
   font-optical-sizing: auto;
-  font-weight: 300;
+  font-weight: 400;
   font-style: normal;
-  font-variation-settings: "BNCE" 30, "INFM" 100, "SPAC" 20;
+  font-variation-settings: "BNCE" 30, "INFM" 80, "SPAC" 10;
 }
 
-p {
-  font-variation-settings: "INFM" 70
+.blog {
+  h2 {
+    font-weight: 600;
+    font-variation-settings: "BNCE" 10, "INFM" 100, "SPAC" 15;
+    font-size: 1.5rem;
+    margin-top: 2rem;
+    border-bottom: 2.5px solid #aaa;
+  }
+
+  h3 {
+    font-weight: 500;
+    font-size: 1.25rem;
+    margin-top: 2rem;
+    padding-left: 0.5rem;
+    border-left: 2.5px solid #aaa;
+  }
+
+  h4 {
+    font-weight: 500;
+    font-size: 1.2rem;
+    padding-top: 1rem;
+  }
+
+  p {
+    font-variation-settings: "INFM" 10, "BNCE" 10, "SPAC" 5;
+    padding: 0.5rem 0rem;
+  }
 }
 
 h1 {
   font-variation-settings:"SPAC" 100;
+}
+
+pre code {
+  padding: 1rem;
+  width: 100%;
+  display: block;
+}
+
+code.inline {
+  background-color: #eeeedd;
+  padding: 0.25rem 0.5rem;
 }
 
 .content {

@@ -59,7 +59,10 @@ defmodule RenMcintyre.MixProject do
       {:jason, "~> 1.2"},
       {:dns_cluster, "~> 0.1.1"},
       {:bandit, "~> 1.5"},
-      {:lucide_icons, "~> 1.1.1"}
+      {:lucide_icons, "~> 1.1.1"},
+      {:nimble_publisher, "~> 1.0"},
+      {:makeup_ts, ">= 0.0.0"},
+      {:makeup_elixir, ">= 0.0.0"}
     ]
   end
 

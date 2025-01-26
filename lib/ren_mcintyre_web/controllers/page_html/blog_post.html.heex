@@ -1,0 +1,11 @@
+<.link href={~p"/blog"}>← Back to post list</.link>
+
+<h1 class="text-2xl font-semibold"><%= @post.title %></h1>
+
+<p class="font-thin text-xs opacity-80 italic">
+  <time class="text-right"><%= @post.date %></time>
+</p>
+
+<section class="blog py-2">
+  <%= raw(@post.body) %>
+</section>
