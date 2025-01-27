@@ -57,7 +57,7 @@ defmodule RenMcintyreWeb.Sidenav do
     <section id="socials" class="gap-4 flex justify-center">
       <a
         class="socials hover:animate-jiggle"
-        href="https://github.com/RentonMcIntyre/"
+        href="https://github.com/SerenMcIntyre"
         target="blank"
         aria-label="GitHub Profile"
       >
@@ -65,7 +65,7 @@ defmodule RenMcintyreWeb.Sidenav do
       </a>
       <a
         class="socials hover:animate-jiggle"
-        href="https://www.linkedin.com/in/renton-mcintyre/"
+        href="https://www.linkedin.com/in/seren-mcintyre"
         target="blank"
         aria-label="LinkedIn Profile"
       >
