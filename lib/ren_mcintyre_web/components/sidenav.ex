@@ -71,6 +71,18 @@ defmodule RenMcintyreWeb.Sidenav do
       >
         <Lucideicons.linkedin />
       </a>
+      <a
+        class="socials flex items-center hover:animate-jiggle"
+        href="https://bsky.app/profile/seren-is-a.dev"
+        target="blank"
+        aria-label="Bluesky Profile"
+      >
+        <img
+          src="/images/Bluesky_Logo.svg"
+          alt="Bluesky Logo"
+          class="w-5 h-5"
+        />
+      </a>
     </section>
     """
   end
